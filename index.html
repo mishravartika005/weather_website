@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+<div class="background-image"></div>
+<div class="background-overlay"></div>
+
+<header class="site-header">
+  <div class="header-content">
+
+    <div class="logo">
+      <img src="wea 2.avif" alt="">
+      <span>Weather</span>
+    </div>
+
+    <nav class="site-nav">
+      <a href="#" class="nav-link">📍 Location</a>
+      <a href="#" class="nav-link">⚙️ Settings</a>
+    </nav>
+
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- SEARCH -->
+  <form class="search-box">
+    <input
+      type="text"
+      class="search-input"
+      placeholder="Search city..."
+      required
+    />
+
+    <button class="search-btn">
+      🔍
+    </button>
+  </form>
+
+  <!-- MAIN WEATHER -->
+  <section class="main-top-layout">
+
+    <div class="main-icon-block">
+      <img
+        src="wea 2.avif"
+        class="main-weather-icon"
+        alt=""
+      />
+    </div>
+
+    <div class="main-details-block">
+      <span class="city-name">Kanpur</span>
+      <span class="main-temp">32°C</span>
+      <span class="main-desc">Sunny</span>
+      <span class="feels-like">Feels like 34°C</span>
+    </div>
+
+    <div class="main-info-bars">
+
+      <div class="info-bar">
+        <span class="info-label">💨 Wind</span>
+
+        <div class="bar-bg">
+          <div class="bar-fill wind"></div>
+        </div>
+
+        <span class="info-value wind-speed">
+          12 km/h
+        </span>
+      </div>
+
+      <div class="info-bar">
+        <span class="info-label">💧 Humidity</span>
+
+        <div class="bar-bg">
+          <div class="bar-fill humidity"></div>
+        </div>
+
+        <span class="info-value humidity-value">
+          58%
+        </span>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- HOURLY -->
+  <section class="hourly-section">
+
+    <div class="hourly-header">
+      <h2>Hourly Forecast</h2>
+    </div>
+
+    <div class="hourly-line">
+    </div>
+
+  </section>
+
+ <!-- TEMPERATURE TREND -->
+<section class="weekly-section">
+
+  <div class="weekly-header">
+
+    <h2>24 Hour Temperature Trend</h2>
+
+    <span class="weekly-subtitle">
+      Hourly Temperature
+    </span>
+
+  </div>
+
+  <div class="weekly-chart-container">
+
+    <svg
+      class="weekly-chart"
+      viewBox="0 0 900 320"
+      preserveAspectRatio="none"
+    >
+
+      <defs>
+
+        <linearGradient
+          id="lineGradient"
+          x1="0%"
+          y1="0%"
+          x2="100%"
+          y2="0%"
+        >
+
+          <stop offset="0%" stop-color="#4f8cff"/>
+          <stop offset="100%" stop-color="#9b59ff"/>
+
+        </linearGradient>
+
+      </defs>
+
+      <!-- LINE -->
+      <path
+        id="tempPath"
+        fill="none"
+        stroke="url(#lineGradient)"
+        stroke-width="6"
+        stroke-linecap="round"
+      />
+
+      <!-- DOTS -->
+      <g id="chartDots"></g>
+
+      <!-- LABELS -->
+      <g id="chartLabels"></g>
+
+    </svg>
+
+    <!-- TIME -->
+    <div class="week-days"></div>
+
+  </div>
+
+</section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -27,12 +27,6 @@ This app provides real-time weather updates, hourly forecasts, and a beautiful U
 
 ---
 
-## 📸 Preview
-
-<img width="100%" alt="Weather App Preview" src="https://via.placeholder.com/1200x600.png?text=Weather+Website+Preview">
-
----
-
 ## ⚙️ How to Run the Project
 
 1. Clone the repository
